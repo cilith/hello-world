@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Zweierpotenzen {
+
+	private Scanner imput;
+	
+	public void zweierpotenzen() {
+		
+		int zielWert;
+		
+		imput = new Scanner(System.in);
+		System.out.println("Bis zu welchem Wert möchten Sie potenzieren? Bitte jetzt eingeben: ");
+		zielWert = imput.nextInt();
+		zielWert +=1;
+		
+		int[] werte = new int[zielWert];
+		double[] potenzen = new double [zielWert];
+		
+		for(int i=0; i<zielWert; i++) {
+			werte[i] = i;
+			potenzen[i] = Math.pow(2, i); //Errechnet die gewählte Potenz an Stelle i 
+			System.out.println(potenzen[i]);
+		}
+	}
+}
